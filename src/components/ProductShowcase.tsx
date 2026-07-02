@@ -19,22 +19,22 @@ export const ProductShowcase: React.FC = () => {
   }
 
   return (
-    <section id="product-showcase" className="py-24 bg-white dark:bg-darknavy transition-colors duration-500 relative overflow-hidden">
+    <section id="product-showcase" className="py-24 bg-white transition-colors duration-500 relative overflow-hidden">
       {/* Background mesh gradient */}
-      <div className="absolute inset-0 bg-mesh-gradient dark:bg-mesh-gradient-dark pointer-events-none" />
+      <div className="absolute inset-0 bg-mesh-gradient pointer-events-none opacity-50" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-primary dark:text-secondary flex items-center gap-2">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-primary flex items-center gap-2 mb-4">
             <Sparkles size={14} />
             Premium Collection
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-darknavy dark:text-white mt-4 leading-tight">
+          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-medical-text leading-tight mb-6">
             Featured Products
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 mt-6 text-sm sm:text-base">
+          <p className="text-base text-slate-600 leading-relaxed">
             Our most trusted formulations, crafted with precision and backed by scientific research. Each product meets the highest pharmaceutical standards.
           </p>
         </div>

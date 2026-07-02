@@ -8,35 +8,56 @@ export default {
   theme: {
     extend: {
       colors: {
+        // New Pharmaceutical Brand Colors
         primary: {
-          DEFAULT: '#0057FF',
-          dark: '#0044CC',
-          light: '#3379FF',
-          glow: 'rgba(0, 87, 255, 0.15)',
+          DEFAULT: '#0B5ED7',  // Deep Medical Blue
+          dark: '#084BA8',
+          light: '#3D7FE0',
+          glow: 'rgba(11, 94, 215, 0.12)',
         },
         secondary: {
-          DEFAULT: '#00B4D8',
-          dark: '#0090AD',
-          light: '#33C3E0',
+          DEFAULT: '#0F9D94',  // Professional Teal
+          dark: '#0C7D76',
+          light: '#3FB4AD',
         },
         accent: {
-          DEFAULT: '#00D084',
-          dark: '#00A669',
-          light: '#33DA9D',
+          DEFAULT: '#22A06B',  // Emerald Green
+          dark: '#1A7F54',
+          light: '#4DB687',
+        },
+        // Neutral Palette
+        slate: {
+          50: '#F8FAFC',   // Warm Off White
+          100: '#F1F5F9',
+          200: '#E2E8F0',
+          300: '#CBD5E1',
+          400: '#94A3B8',
+          500: '#64748B',
+          600: '#475569',
+          700: '#334155',
+          800: '#1E293B',
+          900: '#0F172A',
         },
         darknavy: {
-          DEFAULT: '#0B1220',
-          light: '#131B2E',
-          dark: '#060A12',
-          card: '#111928',
-          border: '#1F2A37',
+          DEFAULT: '#1F2937',  // Dark Slate
+          light: '#374151',
+          dark: '#111827',
+          card: '#FFFFFF',
+          border: '#E5E7EB',
         },
+        // Semantic Colors
+        success: '#16A34A',
+        warning: '#F59E0B',
+        error: '#DC2626',
+        // Medical Context Colors
         medical: {
-          blue: '#0057FF',
-          cyan: '#00B4D8',
-          green: '#00D084',
-          bg: '#F8FBFF',
-          dark: '#0B1220',
+          blue: '#0B5ED7',
+          teal: '#0F9D94',
+          green: '#22A06B',
+          bg: '#F8FAFC',
+          dark: '#1F2937',
+          text: '#1F2937',
+          'text-secondary': '#6B7280',
         }
       },
       fontFamily: {

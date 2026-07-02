@@ -4,7 +4,7 @@ import Lenis from 'lenis';
 export const useSmoothScroll = () => {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.5,
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
@@ -12,6 +12,7 @@ export const useSmoothScroll = () => {
       wheelMultiplier: 0.8,
       touchMultiplier: 1.5,
       infinite: false,
+      autoResize: true,
     });
 
     let rafId: number;
@@ -33,7 +34,8 @@ export const useSmoothScroll = () => {
           e.preventDefault();
           lenis.scrollTo(targetElement, {
             offset: -80,
-            duration: 1.2,
+            duration: 1.0,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           });
         }
       }
@@ -41,10 +43,23 @@ export const useSmoothScroll = () => {
 
     document.addEventListener('click', handleAnchorClick);
 
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      if (lenis.isScrolling) {
+        document.body.style.pointerEvents = 'none';
+      } else {
+        document.body.style.pointerEvents = 'auto';
+      }
+    };
+
+    const scrollInterval = setInterval(optimizeScroll, 100);
+
     return () => {
       cancelAnimationFrame(rafId);
+      clearInterval(scrollInterval);
       lenis.destroy();
       document.removeEventListener('click', handleAnchorClick);
+      document.body.style.pointerEvents = 'auto';
     };
   }, []);
 };

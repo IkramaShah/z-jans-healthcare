@@ -28,19 +28,19 @@ export const Products: React.FC = () => {
   const filteredProducts = filter === 'all' ? products : products;
 
   return (
-    <section id="products" className="py-24 bg-gray-50/50 dark:bg-darknavy-dark/40 transition-colors duration-500">
+    <section id="products" className="py-24 bg-white transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-primary dark:text-secondary flex items-center justify-center gap-2">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-primary flex items-center justify-center gap-2 mb-4">
             <Package size={14} />
             Product Portfolio
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-darknavy dark:text-white mt-4 leading-tight">
+          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-medical-text leading-tight mb-4">
             Our Premium Products
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 mt-6 text-sm sm:text-base">
+          <p className="text-base text-slate-600 leading-relaxed">
             Browse our comprehensive range of pharmaceutical-grade products, each crafted with precision and backed by rigorous quality standards.
           </p>
         </div>
@@ -51,10 +51,10 @@ export const Products: React.FC = () => {
             <button
               key={f.id}
               onClick={() => setFilter(f.id)}
-              className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide transition-all duration-300 ${
                 filter === f.id
                   ? 'bg-primary text-white shadow-lg shadow-primary/20 scale-105'
-                  : 'bg-white dark:bg-white/5 text-darknavy dark:text-white border border-gray-200 dark:border-white/10 hover:border-primary dark:hover:border-secondary hover:scale-105'
+                  : 'bg-white text-medical-text border-2 border-slate-200 hover:border-primary hover:shadow-md hover:scale-105'
               }`}
             >
               {f.label}

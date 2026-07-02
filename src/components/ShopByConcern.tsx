@@ -107,7 +107,7 @@ export const ShopByConcern: React.FC = () => {
   ];
 
   return (
-    <section id="shop-by-concern" className="py-24 bg-gray-50/50 dark:bg-darknavy-dark/40 transition-colors duration-500 relative overflow-hidden">
+    <section id="shop-by-concern" className="py-24 bg-slate-50 transition-colors duration-500 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
@@ -116,13 +116,13 @@ export const ShopByConcern: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-primary dark:text-secondary">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-primary mb-4 inline-block">
             Personalized Healthcare Solutions
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-darknavy dark:text-white mt-4 leading-tight">
+          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-medical-text leading-tight mb-6">
             Shop by Concern
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 mt-6 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
             Discover products tailored to your specific health needs. Each category is backed by scientific research and premium formulations.
           </p>
         </div>
@@ -192,7 +192,7 @@ export const ShopByConcern: React.FC = () => {
         <div className="mt-16 text-center">
           <a
             href="#products"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-sm font-extrabold uppercase tracking-wider bg-primary hover:bg-primary-dark text-white shadow-xl shadow-primary/20 hover:shadow-primary/35 hover:-translate-y-0.5 transition-all duration-300 group"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-extrabold uppercase tracking-wider bg-primary hover:bg-primary-dark text-white shadow-xl shadow-primary/20 hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 group"
           >
             Explore All Products
             <Heart size={16} className="group-hover:scale-110 transition-transform" />

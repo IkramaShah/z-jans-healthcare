@@ -53,7 +53,7 @@ export const Navbar: React.FC = () => {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? 'py-4 glassmorphism dark:glass-dark shadow-lg border-b border-white/10 dark:border-white/5'
+          ? 'py-4 bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200'
           : 'py-6 bg-transparent border-b border-transparent'
       }`}
     >
@@ -65,10 +65,10 @@ export const Navbar: React.FC = () => {
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
           </div>
           <div className="flex flex-col">
-            <span className="font-display font-bold text-lg tracking-wide text-darknavy dark:text-white leading-none">
+            <span className="font-display font-bold text-lg tracking-wide text-medical-text leading-none">
               Z-JANS
             </span>
-            <span className="text-[10px] uppercase font-bold tracking-widest text-primary dark:text-secondary mt-0.5">
+            <span className="text-[10px] uppercase font-bold tracking-widest text-primary mt-0.5">
               HEALTHCARE
             </span>
           </div>
@@ -85,7 +85,7 @@ export const Navbar: React.FC = () => {
             >
               <a
                 href={link.href}
-                className="px-4 py-2 text-sm font-semibold tracking-wide text-darknavy/80 hover:text-primary dark:text-white/80 dark:hover:text-secondary flex items-center gap-1 transition-colors duration-200"
+                className="px-4 py-2 text-sm font-semibold tracking-wide text-medical-text hover:text-primary flex items-center gap-1 transition-colors duration-200"
               >
                 {link.name}
                 {link.hasMega && <ChevronDown size={14} className="opacity-60" />}
@@ -145,7 +145,7 @@ export const Navbar: React.FC = () => {
           <button
             onClick={() => setSearchOpen(true)}
             aria-label="Search medicine"
-            className="p-2 rounded-xl text-darknavy hover:text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-200"
+            className="p-2 rounded-xl text-medical-text hover:text-primary hover:bg-slate-50 transition-all duration-200"
           >
             <Search size={18} />
           </button>
@@ -183,7 +183,7 @@ export const Navbar: React.FC = () => {
           <button
             onClick={toggleDarkMode}
             aria-label="Toggle theme"
-            className="p-2 rounded-xl text-darknavy hover:text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-200"
+            className="p-2 rounded-xl text-medical-text hover:text-primary hover:bg-slate-50 transition-all duration-200"
           >
             {darkMode ? <Sun size={18} /> : <Moon size={18} />}
           </button>

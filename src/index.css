@@ -10,11 +10,25 @@
   }
 
   body {
-    @apply font-sans bg-medical-bg text-darknavy antialiased transition-colors duration-300;
+    @apply font-sans bg-slate-50 text-medical-text antialiased transition-colors duration-300;
   }
 
   body.dark {
     @apply bg-darknavy text-white;
+  }
+
+  /* Performance optimizations */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Hardware acceleration for animations */
+  .animate-float,
+  [style*="animation: float"] {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 
   /* Large Typography Accessibility support */
@@ -48,19 +62,19 @@
   }
 }
 
-/* Glassmorphism helpers */
+/* Glassmorphism helpers - Updated for new brand */
 .glassmorphism {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 231, 235, 0.6);
 }
 
 .glass-dark {
-  background: rgba(11, 18, 32, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(31, 41, 55, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Custom Scrollbar */
@@ -112,21 +126,21 @@ html.lenis {
   position: relative;
 }
 
-/* Animated gradient background */
+/* Animated gradient background - Updated for pharmaceutical feel */
 .bg-mesh-gradient {
   background-image: 
-    radial-gradient(at 0% 0%, rgba(0, 87, 255, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(0, 180, 216, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(0, 208, 132, 0.08) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(0, 87, 255, 0.05) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(11, 94, 215, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(15, 157, 148, 0.04) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(34, 160, 107, 0.03) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(11, 94, 215, 0.03) 0px, transparent 50%);
 }
 
 .bg-mesh-gradient-dark {
   background-image: 
-    radial-gradient(at 0% 0%, rgba(0, 87, 255, 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(0, 180, 216, 0.12) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(11, 18, 32, 0.5) 0px, transparent 80%),
-    radial-gradient(at 0% 100%, rgba(0, 208, 132, 0.08) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(11, 94, 215, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(15, 157, 148, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(31, 41, 55, 0.5) 0px, transparent 80%),
+    radial-gradient(at 0% 100%, rgba(34, 160, 107, 0.04) 0px, transparent 50%);
 }
 
 /* Hide scrollbar for marquee but keep active */
@@ -138,29 +152,43 @@ html.lenis {
   scrollbar-width: none;
 }
 
-/* Enhanced Animations */
+/* Enhanced Animations - Optimized for performance */
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) translateZ(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-20px) translateZ(0);
   }
 }
 
 @keyframes glow-pulse {
   0%, 100% {
     opacity: 0.5;
-    transform: scale(1);
+    transform: scale(1) translateZ(0);
   }
   50% {
     opacity: 0.8;
-    transform: scale(1.05);
+    transform: scale(1.05) translateZ(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
   }
 }
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+.animate-float:hover,
+.hover\:pause:hover {
+  animation-play-state: paused;
 }
 
 .animate-glow-pulse {
