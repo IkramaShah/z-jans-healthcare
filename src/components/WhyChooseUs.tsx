@@ -29,7 +29,7 @@ const BentoCard: React.FC<BentoCardProps> = ({ title, desc, icon: Icon, gridClas
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className={`relative group rounded-3xl border border-gray-200/50 dark:border-white/5 bg-white dark:bg-darknavy-card p-8 shadow-md hover:shadow-2xl overflow-hidden transition-all duration-500 flex flex-col justify-between min-h-[220px] ${gridClass}`}
+      className={`relative group rounded-3xl border border-slate-200 dark:border-white/5 bg-white dark:bg-darknavy-card p-8 shadow-md hover:shadow-2xl overflow-hidden transition-all duration-500 flex flex-col justify-between min-h-[220px] ${gridClass}`}
     >
       {/* Vercel-like Spotlight glow layer */}
       {hovered && (
@@ -61,7 +61,7 @@ const BentoCard: React.FC<BentoCardProps> = ({ title, desc, icon: Icon, gridClas
         <h3 className="font-display font-extrabold text-lg text-darknavy dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-secondary transition-colors">
           {title}
         </h3>
-        <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+        <p className="text-xs text-slate-600 dark:text-gray-400 leading-relaxed">
           {desc}
         </p>
       </div>
@@ -131,7 +131,7 @@ export const WhyChooseUs: React.FC = () => {
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-darknavy dark:text-white mt-3 leading-tight">
             Designed for Trust, Innovated for Health
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 mt-4 text-xs sm:text-sm">
+          <p className="text-slate-600 dark:text-gray-400 mt-4 text-xs sm:text-sm">
             We provide hospitals, government bodies, and global partners with high-grade pharmaceutical manufacturing options built upon strict scientific principles.
           </p>
         </div>

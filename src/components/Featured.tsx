@@ -82,7 +82,7 @@ export const Featured: React.FC = () => {
               </div>
 
               <div>
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-gray-400">
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-slate-600 dark:text-gray-400">
                   {product.category}
                 </span>
 
@@ -95,32 +95,32 @@ export const Featured: React.FC = () => {
                   <span>{product.cert}</span>
                 </div>
 
-                <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mt-4 line-clamp-3">
+                <p className="text-xs text-slate-600 dark:text-gray-400 leading-relaxed mt-4 line-clamp-3">
                   {product.description}
                 </p>
 
                 {/* Packaging details table */}
-                <div className="mt-6 border-t border-gray-100 dark:border-white/5 pt-4 space-y-2 text-[11px]">
+                <div className="mt-6 border-t border-slate-200 dark:border-white/5 pt-4 space-y-2 text-[11px]">
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Strength</span>
+                    <span className="text-slate-500 dark:text-gray-400">Strength</span>
                     <span className="font-bold text-darknavy dark:text-white/80">{product.strength}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Packaging</span>
+                    <span className="text-slate-500 dark:text-gray-400">Packaging</span>
                     <span className="font-bold text-darknavy dark:text-white/80">{product.packaging}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Status</span>
+                    <span className="text-slate-500 dark:text-gray-400">Status</span>
                     <span className="font-bold text-primary dark:text-secondary">{product.status}</span>
                   </div>
                 </div>
               </div>
 
               {/* Action buttons */}
-              <div className="mt-8 pt-4 border-t border-gray-100 dark:border-white/5 space-y-2">
+              <div className="mt-8 pt-4 border-t border-slate-200 dark:border-white/5 space-y-2">
                 <button
                   onClick={() => setSelectedProduct(product)}
-                  className="w-full py-2.5 rounded-xl border border-gray-200 dark:border-white/10 hover:border-primary dark:hover:border-secondary text-xs font-bold text-darknavy dark:text-white flex items-center justify-center gap-2 hover:bg-gray-50 dark:hover:bg-white/5 transition-all"
+                  className="w-full py-2.5 rounded-xl border border-slate-300 dark:border-white/10 hover:border-primary dark:hover:border-secondary text-xs font-bold text-darknavy dark:text-white flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-white/5 transition-all"
                 >
                   <Info size={14} />
                   Learn More

@@ -57,7 +57,7 @@ export const About: React.FC = () => {
           
           {/* Left Column: Mission, Vision, Values and Tabs */}
           <div className="lg:col-span-6">
-            <div className="flex gap-2 border-b border-gray-100 dark:border-white/5 pb-4 mb-8">
+            <div className="flex gap-2 border-b border-slate-200 dark:border-white/5 pb-4 mb-8">
               {(['mission', 'vision', 'values'] as const).map((tab) => (
                 <button
                   key={tab}
@@ -65,7 +65,7 @@ export const About: React.FC = () => {
                   className={`px-5 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all duration-300 ${
                     activeTab === tab
                       ? 'bg-primary text-white shadow-lg shadow-primary/20'
-                      : 'bg-gray-100 dark:bg-white/5 text-gray-500 hover:text-darknavy dark:hover:text-white'
+                      : 'bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-gray-500 hover:text-darknavy dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/10'
                   }`}
                 >
                   {tab}
@@ -74,7 +74,7 @@ export const About: React.FC = () => {
             </div>
 
             {/* Tab Panel */}
-            <div className="glassmorphism dark:glass-dark rounded-3xl border border-white/20 p-8 shadow-xl relative overflow-hidden min-h-[350px] flex flex-col justify-between">
+            <div className="bg-white dark:bg-darknavy-card rounded-3xl border border-slate-200 dark:border-white/5 p-8 shadow-xl relative overflow-hidden min-h-[350px] flex flex-col justify-between">
               <div className="absolute -right-8 -top-8 w-28 h-28 bg-primary/5 rounded-full blur-xl pointer-events-none" />
               
               <div>
@@ -87,13 +87,13 @@ export const About: React.FC = () => {
                   </h3>
                 </div>
 
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
+                <p className="text-slate-700 dark:text-gray-300 text-sm leading-relaxed mb-6">
                   {tabContents[activeTab].desc}
                 </p>
 
                 <ul className="space-y-3">
                   {tabContents[activeTab].points.map((point, index) => (
-                    <li key={index} className="flex items-center gap-3 text-xs font-bold text-darknavy/80 dark:text-white/80">
+                    <li key={index} className="flex items-center gap-3 text-xs font-bold text-darknavy dark:text-white/80">
                       <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                       <span>{point}</span>
                     </li>
@@ -101,10 +101,10 @@ export const About: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="border-t border-gray-100 dark:border-white/5 pt-6 mt-8 flex items-center gap-4">
+              <div className="border-t border-slate-200 dark:border-white/5 pt-6 mt-8 flex items-center gap-4">
                 <div className="flex items-center gap-2">
                   <Award size={18} className="text-secondary" />
-                  <span className="text-[11px] font-extrabold uppercase tracking-widest text-gray-400">
+                  <span className="text-[11px] font-extrabold uppercase tracking-widest text-slate-600 dark:text-gray-400">
                     SGS Audited Enterprise
                   </span>
                 </div>
@@ -120,7 +120,7 @@ export const About: React.FC = () => {
             </h3>
 
             {/* Vertical Timeline */}
-            <div className="relative border-l border-gray-200 dark:border-white/10 pl-6 ml-4 space-y-8">
+            <div className="relative border-l border-slate-300 dark:border-white/10 pl-6 ml-4 space-y-8">
               {milestones.map((milestone, index) => (
                 <div key={index} className="relative group">
                   {/* Circle indicator */}
@@ -134,11 +134,11 @@ export const About: React.FC = () => {
                   </span>
 
                   {/* Content card */}
-                  <div className="p-5 rounded-2xl border border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02] hover:bg-white dark:hover:bg-white/5 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                  <div className="p-5 rounded-2xl border border-slate-200 dark:border-white/5 bg-white dark:bg-white/[0.02] hover:bg-white dark:hover:bg-white/5 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                     <h4 className="text-sm font-extrabold text-darknavy dark:text-white mb-2">
                       {milestone.title}
                     </h4>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                    <p className="text-xs text-slate-600 dark:text-gray-400 leading-relaxed">
                       {milestone.desc}
                     </p>
                   </div>

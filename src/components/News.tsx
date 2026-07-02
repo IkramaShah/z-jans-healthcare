@@ -81,7 +81,7 @@ export const News: React.FC = () => {
                 {/* Info Text */}
                 <div className="p-6">
                   {/* Date & read time */}
-                  <div className="flex items-center gap-4 text-[10px] font-bold text-gray-400 mb-3">
+                  <div className="flex items-center gap-4 text-[10px] font-bold text-slate-500 dark:text-gray-400 mb-3">
                     <div className="flex items-center gap-1.5">
                       <Calendar size={12} />
                       <span>{item.date}</span>
@@ -96,17 +96,17 @@ export const News: React.FC = () => {
                     {item.title}
                   </h3>
 
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-3 line-clamp-3 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-gray-400 mt-3 line-clamp-3 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
               </div>
 
               {/* Card Footer */}
-              <div className="p-6 border-t border-gray-100 dark:border-white/5 flex items-center justify-between">
+              <div className="p-6 border-t border-slate-200 dark:border-white/5 flex items-center justify-between">
                 <button
                   onClick={() => alert(`Opening article: ${item.title}`)}
-                  className="text-xs font-bold text-darknavy/80 hover:text-primary dark:text-white/80 dark:hover:text-secondary inline-flex items-center gap-1.5 transition-colors group/btn"
+                  className="text-xs font-bold text-darknavy hover:text-primary dark:text-white/80 dark:hover:text-secondary inline-flex items-center gap-1.5 transition-colors group/btn"
                 >
                   <BookOpen size={14} />
                   <span>Read Article</span>

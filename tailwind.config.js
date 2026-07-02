@@ -8,10 +8,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        // New Pharmaceutical Brand Colors
+        // Premium Pharmaceutical Brand Colors
         primary: {
           DEFAULT: '#0B5ED7',  // Deep Medical Blue
-          dark: '#084BA8',
+          dark: '#084CB5',
           light: '#3D7FE0',
           glow: 'rgba(11, 94, 215, 0.12)',
         },
@@ -25,25 +25,25 @@ export default {
           dark: '#1A7F54',
           light: '#4DB687',
         },
-        // Neutral Palette
+        // Refined Neutral Palette
         slate: {
-          50: '#F8FAFC',   // Warm Off White
+          50: '#F8FAFC',   // Warm Off White (Background)
           100: '#F1F5F9',
-          200: '#E2E8F0',
+          200: '#E2E8F0',  // Borders
           300: '#CBD5E1',
           400: '#94A3B8',
-          500: '#64748B',
+          500: '#64748B',  // Secondary Text
           600: '#475569',
           700: '#334155',
           800: '#1E293B',
-          900: '#0F172A',
+          900: '#0F172A',  // Dark Sections
         },
         darknavy: {
-          DEFAULT: '#1F2937',  // Dark Slate
+          DEFAULT: '#1F2937',  // Primary Text
           light: '#374151',
           dark: '#111827',
           card: '#FFFFFF',
-          border: '#E5E7EB',
+          border: '#E2E8F0',
         },
         // Semantic Colors
         success: '#16A34A',
@@ -57,7 +57,7 @@ export default {
           bg: '#F8FAFC',
           dark: '#1F2937',
           text: '#1F2937',
-          'text-secondary': '#6B7280',
+          'text-secondary': '#64748B',
         }
       },
       fontFamily: {

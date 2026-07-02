@@ -47,7 +47,7 @@ export const Quality: React.FC = () => {
                       {std.title}
                     </span>
                   </div>
-                  <span className="text-[10px] text-gray-500 dark:text-gray-400 leading-tight block">
+                  <span className="text-[10px] text-slate-600 dark:text-gray-400 leading-tight block">
                     {std.subtitle}
                   </span>
                 </div>
@@ -77,7 +77,7 @@ export const Quality: React.FC = () => {
                       <h4 className="text-xs font-bold text-darknavy dark:text-white group-hover:text-primary dark:group-hover:text-secondary transition-colors">
                         {item.title}
                       </h4>
-                      <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
+                      <p className="text-[11px] text-slate-600 dark:text-gray-400 mt-1 leading-relaxed">
                         {item.desc}
                       </p>
                     </div>

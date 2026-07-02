@@ -50,7 +50,7 @@ export const Contact: React.FC = () => {
               <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-darknavy dark:text-white mt-3 leading-tight">
                 Get in Touch
               </h2>
-              <p className="text-gray-500 dark:text-gray-400 mt-4 text-xs sm:text-sm">
+              <p className="text-slate-600 dark:text-gray-400 mt-4 text-xs sm:text-sm">
                 Have questions regarding supply licenses, certifications, drug registrations, or bulk inquiries? Contact our team.
               </p>
 
@@ -61,7 +61,7 @@ export const Contact: React.FC = () => {
                     <MapPin size={16} />
                   </div>
                   <div>
-                    <span className="text-gray-400 block font-semibold">HQ Address</span>
+                    <span className="text-slate-500 dark:text-gray-400 block font-semibold">HQ Address</span>
                     <span className="font-bold text-darknavy dark:text-white">Plots 14-16, Industrial Phase 3, Rawalpindi, Pakistan</span>
                   </div>
                 </div>
@@ -71,7 +71,7 @@ export const Contact: React.FC = () => {
                     <Phone size={16} />
                   </div>
                   <div>
-                    <span className="text-gray-400 block font-semibold">Office Numbers</span>
+                    <span className="text-slate-500 dark:text-gray-400 block font-semibold">Office Numbers</span>
                     <span className="font-bold text-darknavy dark:text-white">+92 (51) 555-1200 / 1201</span>
                   </div>
                 </div>
@@ -81,7 +81,7 @@ export const Contact: React.FC = () => {
                     <Mail size={16} />
                   </div>
                   <div>
-                    <span className="text-gray-400 block font-semibold">Corporate Email</span>
+                    <span className="text-slate-500 dark:text-gray-400 block font-semibold">Corporate Email</span>
                     <span className="font-bold text-darknavy dark:text-white">info@zjans.com / sales@zjans.com</span>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ export const Contact: React.FC = () => {
                     <Clock size={16} />
                   </div>
                   <div>
-                    <span className="text-gray-400 block font-semibold">Working Hours</span>
+                    <span className="text-slate-500 dark:text-gray-400 block font-semibold">Working Hours</span>
                     <span className="font-bold text-darknavy dark:text-white">Mon - Sat: 09:00 AM - 05:00 PM PST</span>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export const Contact: React.FC = () => {
                   <h4 className="text-[11px] font-extrabold uppercase tracking-wider text-red-600 dark:text-red-400">
                     Pharmacovigilance Alert
                   </h4>
-                  <p className="text-[10px] text-gray-500 dark:text-gray-400 leading-normal mt-0.5">
+                  <p className="text-[10px] text-slate-600 dark:text-gray-400 leading-normal mt-0.5">
                     To report adverse drug events or side-effects, contact our safety team directly at <span className="font-bold text-red-500">safety@zjans.com</span> or call our 24/7 helpline at +92 (300) 555-4001.
                   </p>
                 </div>
@@ -238,7 +238,7 @@ export const Contact: React.FC = () => {
                 )}
               </div>
 
-              <span className="text-[10px] text-gray-400 mt-6 block text-center leading-normal">
+              <span className="text-[10px] text-slate-600 dark:text-gray-400 mt-6 block text-center leading-normal">
                 By submitting this form, you acknowledge that your personal and organizational credentials will be securely logged in compliance with pharmaceutical data retention acts.
               </span>
 
