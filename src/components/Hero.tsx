@@ -2,12 +2,19 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Download, Shield, Award, Microscope, Heart, CheckCircle } from 'lucide-react';
 import { parseProductCSV } from '../utils/csvParser';
 import type { CSVProduct } from '../utils/csvParser';
+import OptimizedImage from './OptimizedImage';
 
 export const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
   const [products, setProducts] = useState<CSVProduct[]>([]);
   const [stats, setStats] = useState({ markets: 0, products: 0, compliance: 0 });
   const [statsVisible, setStatsVisible] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Prevent hydration mismatch
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Load products from CSV
   useEffect(() => {
@@ -215,7 +222,7 @@ export const Hero: React.FC = () => {
             <div className="relative w-full h-full">
               
               {/* Floating Products */}
-              {products.map((product, idx) => {
+              {isMounted && products.map((product, idx) => {
                 const position = productPositions[idx];
                 if (!position) return null;
 
@@ -232,11 +239,12 @@ export const Hero: React.FC = () => {
                     <div className={`${position.size}`}>
                       <div className="relative w-full h-full rounded-2xl bg-white/95 backdrop-blur-sm border border-slate-300 shadow-xl hover:shadow-2xl transition-all duration-500 p-3 group-hover:scale-105">
                         <div className="relative w-full h-full rounded-xl overflow-hidden bg-gradient-to-br from-slate-50 to-white">
-                          <img
+                          <OptimizedImage
                             src={product.src || 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?auto=format&fit=crop&q=80&w=400'}
                             alt={product.title}
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            loading="lazy"
+                            loading="eager"
+                            priority={idx < 2}
                           />
                           {/* Subtle glow on hover */}
                           <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
